@@ -1,0 +1,49 @@
+*,*::after,*::before {
+	box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.calculator-frame {
+    width: 390px;
+    margin: 50px auto;
+}
+
+.display {
+    margin: 10px 0;
+    padding: 1rem 1rem;
+    width: 100%;
+    border: 1px solid gray;
+    background-color: azure;
+    text-align: right;
+}
+
+.btn-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.btn {
+    border: 0;
+    padding: 10px 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    transition: background-color 0.3s ease-in;
+}
+
+.number {
+    background-color: darkcyan;
+}
+
+.number:active {
+    background-color: rgb(19, 183, 183);
+}
+
+.symbol,.result {
+    background-color:rgb(46, 139, 120);
+}
+
+.symbol:active,.result:active {
+    background-color:rgb(76, 173, 154);
+}
