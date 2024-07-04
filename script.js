@@ -60,12 +60,15 @@ function clearDisplay() {
 }
 
 function calculate() {
-    let result = inputDisplay.innerText
     try {
-        result = eval(inputDisplay.innerText);
-    } catch (e) {
-        result = 'Error!'
+        const expression = inputDisplay.innerText;
+        if (expression.includes('/0')) {
+            replaceDisplay('Error: 0で割れません！');
+        } else {
+            const result = math.evaluate(expression);
+            replaceDisplay(result);
+        }
+    } catch (error) {
+        replaceDisplay('Error');
     }
-
-    replaceDisplay(result)
 }
